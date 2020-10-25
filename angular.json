@@ -1,0 +1,164 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-directive": {
+      "projectType": "library",
+      "root": "projects/ngx-directive",
+      "sourceRoot": "projects/ngx-directive/src",
+      "prefix": "vlahio",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ngx-directive/tsconfig.lib.json",
+            "project": "projects/ngx-directive/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-directive/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-directive/src/test.ts",
+            "tsConfig": "projects/ngx-directive/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-directive/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-directive/tsconfig.lib.json",
+              "projects/ngx-directive/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngx-directive-test": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/ngx-directive-test",
+      "sourceRoot": "projects/ngx-directive-test/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/ngx-directive-test",
+            "index": "projects/ngx-directive-test/src/index.html",
+            "main": "projects/ngx-directive-test/src/main.ts",
+            "polyfills": "projects/ngx-directive-test/src/polyfills.ts",
+            "tsConfig": "projects/ngx-directive-test/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/ngx-directive-test/src/favicon.ico",
+              "projects/ngx-directive-test/src/assets"
+            ],
+            "styles": [
+              "projects/ngx-directive-test/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/ngx-directive-test/src/environments/environment.ts",
+                  "with": "projects/ngx-directive-test/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ngx-directive-test:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ngx-directive-test:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ngx-directive-test:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-directive-test/src/test.ts",
+            "polyfills": "projects/ngx-directive-test/src/polyfills.ts",
+            "tsConfig": "projects/ngx-directive-test/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-directive-test/karma.conf.js",
+            "assets": [
+              "projects/ngx-directive-test/src/favicon.ico",
+              "projects/ngx-directive-test/src/assets"
+            ],
+            "styles": [
+              "projects/ngx-directive-test/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-directive-test/tsconfig.app.json",
+              "projects/ngx-directive-test/tsconfig.spec.json",
+              "projects/ngx-directive-test/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/ngx-directive-test/e2e/protractor.conf.js",
+            "devServerTarget": "ngx-directive-test:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngx-directive-test:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "ngx-directive"
+}
