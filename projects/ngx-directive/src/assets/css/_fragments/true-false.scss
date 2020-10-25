@@ -1,0 +1,18 @@
+.vlahio-check-container {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  text-align: left;
+
+  .vlahio-check-icon {
+    position: absolute;
+    margin-left: 0;
+    margin-top: 4px;
+    width: 14px;
+    height: 8px;
+    border-bottom: solid 2px currentColor;
+    border-left: solid 2px currentColor;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}

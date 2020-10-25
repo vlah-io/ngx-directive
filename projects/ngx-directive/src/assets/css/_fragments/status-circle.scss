@@ -1,0 +1,15 @@
+.vlahio-status-circle {
+  display: inline-block;
+  border-radius: 50%;
+  width: .7em;
+  height: .7em;
+
+  &.on {
+    background-color: #3dc37d;
+  }
+
+  &.off {
+    background-color: #d9d9d9;
+  }
+}
+

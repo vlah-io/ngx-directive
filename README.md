@@ -1,27 +1,32 @@
-# NgxDirective
+@vlah.io/ngx-directive
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+Set of handy Angular directives.
 
-## Development server
+### Usage (code example)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+<table class="table table-bordered k-t-r">
+  <tbody>
+    <tr>
+      <td vlahioIfNoContent></td>
+      <td [vlahioIfNoContent]="'No content!'"></td>
+      <td vlahioOnOff></td>
+      <td [vlahioOnOff]="true"></td>
+      <td [vlahioOnOff]="true" [align]="'center'"></td>
+      <td vlahioStatusCircle></td>
+      <td [vlahioStatusCircle]="true"></td>
+      <td [vlahioStatusCircle]="true" [align]="'center'"></td>
+      <td vlahioTrueFalse></td>
+      <td [vlahioTrueFalse]="true"></td>
+      <td [vlahioTrueFalse]="true" [align]="'center'"></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-## Code scaffolding
+### CSS styles
+```
+  @import "../../ngx-directive/src/assets/css/ngx-directive.css";
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+For more details read [here](https://@vlah.iogithub.com/vlah-io/ngx-directive/blob/master/INSTALLATION.md).

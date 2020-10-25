@@ -1,0 +1,32 @@
+.vlahio-check-container {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  text-align: left;
+}
+.vlahio-check-container .vlahio-check-icon {
+  position: absolute;
+  margin-left: 0;
+  margin-top: 4px;
+  width: 14px;
+  height: 8px;
+  border-bottom: solid 2px currentColor;
+  border-left: solid 2px currentColor;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.vlahio-status-circle {
+  display: inline-block;
+  border-radius: 50%;
+  width: 0.7em;
+  height: 0.7em;
+}
+.vlahio-status-circle.on {
+  background-color: #3dc37d;
+}
+.vlahio-status-circle.off {
+  background-color: #d9d9d9;
+}
+
+/*# sourceMappingURL=ngx-directive.css.map */

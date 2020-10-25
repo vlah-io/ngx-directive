@@ -1,24 +1,32 @@
-# NgxDirective
+@vlah.io/ngx-directive
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+Set of handy Angular directives.
 
-## Code scaffolding
+### Usage (code example)
 
-Run `ng generate component component-name --project ngx-directive` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-directive`.
-> Note: Don't forget to add `--project ngx-directive` or else it will be added to the default project in your `angular.json` file. 
+```
+<table class="table table-bordered k-t-r">
+  <tbody>
+    <tr>
+      <td vlahioIfNoContent></td>
+      <td [vlahioIfNoContent]="'No content!'"></td>
+      <td vlahioOnOff></td>
+      <td [vlahioOnOff]="true"></td>
+      <td [vlahioOnOff]="true" [align]="'center'"></td>
+      <td vlahioStatusCircle></td>
+      <td [vlahioStatusCircle]="true"></td>
+      <td [vlahioStatusCircle]="true" [align]="'center'"></td>
+      <td vlahioTrueFalse></td>
+      <td [vlahioTrueFalse]="true"></td>
+      <td [vlahioTrueFalse]="true" [align]="'center'"></td>
+    </tr>
+  </tbody>
+</table>
+```
 
-## Build
+### CSS styles
+```
+  @import "../../ngx-directive/src/assets/css/ngx-directive.css";
+```
 
-Run `ng build ngx-directive` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Publishing
-
-After building your library with `ng build ngx-directive`, go to the dist folder `cd dist/ngx-directive` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ngx-directive` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+For more details read [here](https://@vlah.iogithub.com/vlah-io/ngx-directive/blob/master/INSTALLATION.md).
