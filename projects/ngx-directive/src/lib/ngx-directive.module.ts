@@ -3,7 +3,7 @@ import {ClickOutsideDirective} from './directive/click-outside.directive';
 import {IfNoContentDirective} from './directive/if-no-content.directive';
 import {OnOffDirective} from './directive/on-off.directive';
 import {StatusCircleDirective} from './directive/status-circle.directive';
-import {ToggleHeightDirective} from './directive/toggle-height.directive';
+import {ToggleVisibilityOnResizeDirective} from './directive/toggle-visibility-on-resize.directive';
 import {TrueFalseDirective} from './directive/true-false.directive';
 
 @NgModule({
@@ -13,7 +13,7 @@ import {TrueFalseDirective} from './directive/true-false.directive';
     IfNoContentDirective,
     OnOffDirective,
     StatusCircleDirective,
-    ToggleHeightDirective,
+    ToggleVisibilityOnResizeDirective,
     TrueFalseDirective
   ],
   exports: [
@@ -21,7 +21,7 @@ import {TrueFalseDirective} from './directive/true-false.directive';
     IfNoContentDirective,
     OnOffDirective,
     StatusCircleDirective,
-    ToggleHeightDirective,
+    ToggleVisibilityOnResizeDirective,
     TrueFalseDirective
   ]
 })

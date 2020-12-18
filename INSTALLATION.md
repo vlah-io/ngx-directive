@@ -6,7 +6,7 @@ Package generated with `angular-cli` as follows
 ### Create new
 
 ```
-  ng new ngx-directive --createApplication=false --prefix=vlah
+  ng new ngx-directive --createApplication=false --prefix=vlahio
   cd ngx-directive
 ```
 
@@ -14,7 +14,7 @@ Package generated with `angular-cli` as follows
 
 ```
   cd ngx-directive
-  ng generate library ngx-directive --prefix=vlah
+  ng generate library ngx-directive --prefix=vlahio
 ```
 
 ### Generate test application

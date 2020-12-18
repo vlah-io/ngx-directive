@@ -5,18 +5,18 @@ import {DomSanitizer, SafeHtml, SafeStyle} from '@angular/platform-browser';
   selector: '[vlahioIfNoContent]'
 })
 export class IfNoContentDirective {
-  @Input() vlahioIfNoContent: string;
+  @Input() vlahioIfNoContent: string | undefined;
 
   constructor(private sanitizer: DomSanitizer) {
   }
 
   @HostBinding('innerHtml')
-  get _innerHTML(): SafeHtml {
+  get innerHTML(): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(this.vlahioIfNoContent || '…');
   }
 
   @HostBinding('style')
-  get _style(): SafeStyle {
+  get style(): SafeStyle {
     // this.renderer.setAttribute(this.elRef.nativeElement, 'class', str);
     // https://ngrefs.com/en/latest/styling/style-and-host-binding
 

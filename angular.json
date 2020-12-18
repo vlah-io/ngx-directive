@@ -30,14 +30,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-directive/tsconfig.lib.json",
-              "projects/ngx-directive/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/ngx-directive/**/*.ts",
+              "projects/ngx-directive/**/*.html"
             ]
           }
         }
@@ -79,7 +76,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -134,15 +130,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ngx-directive-test/tsconfig.app.json",
-              "projects/ngx-directive-test/tsconfig.spec.json",
-              "projects/ngx-directive-test/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/ngx-directive-test/**/*.ts",
+              "projects/ngx-directive-test/**/*.html"
             ]
           }
         },
@@ -159,6 +151,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "ngx-directive"
 }

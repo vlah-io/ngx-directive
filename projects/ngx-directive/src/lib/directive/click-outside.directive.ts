@@ -4,7 +4,7 @@ import {Directive, ElementRef, EventEmitter, HostListener, Input, Output} from '
   selector: '[vlahioClickOutside]'
 })
 export class ClickOutsideDirective {
-  @Input() ignoreIfClass: string;
+  @Input() ignoreIfClass: string | undefined;
 
   @Output() clickOutside: EventEmitter<boolean> = new EventEmitter();
 
@@ -12,7 +12,7 @@ export class ClickOutsideDirective {
   }
 
   @HostListener('document:click', ['$event.target'])
-  _onClick(targetElement): void {
+  onClick(targetElement: any): void {
     if (
       !this.ignoreIfClass
       ||
